@@ -16,17 +16,26 @@ public class WeatherMenu {
 	// 2. 날씨정보 추가 - addweather
 	// 3. 전체날씨정보 - view
 	// 4. 지역날씨검색 - findWeather, view 실행
+	// 5. 날씨정보 삭제 - 
 	// 5. 프로그램종료
 
 	public void start() {
 		HashMap<String, Weather> map = weatherService.init();
 		// weatherView.view(map);
 		
-		Weather weather = weatherService.findWeather(map);
+		// Weather weather = weatherService.findWeather(map);
+		// if(weather != null) {
+		//	weatherView.view(weather);	
+		// }else {
+		// 	weatherView.view("해당 지역의 정보가 없습니다.");
+		//}
+		
+		Weather weather = weatherService.deleteWeather(map);
 		if(weather != null) {
-			weatherView.view(weather);	
+			weatherView.view("삭제가 되었습니다.");
 		}else {
-			weatherView.view("해당 지역의 정보가 없습니다.");
+			weatherView.view("삭제 실패");
 		}
+		
 	}
 }
