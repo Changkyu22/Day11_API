@@ -9,6 +9,21 @@ public class StudentService {
 	public StudentService() {
 		sc = new Scanner(System.in);
 	}
+	
+	public boolean studentDelete(ArrayList<Student> students, Student student) {
+		students.remove(student);
+		System.out.println("학생의 이름을 입력하세요");
+		boolean check = false;
+		
+		// for(int i=0; i<students.size();i++){
+		// if(students.get(i).getName().equals.(name)){
+		// students.remove(i);
+		// break;
+		//}  이것도 맞음
+		check = true;
+		return check;
+		
+	}
 	//메서드명 studentSearch
 	//학생의이름을 입력 받아서. 이름이 같은 학생을 리턴 
 	public Student studentSearch(ArrayList<Student> students) {

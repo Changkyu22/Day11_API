@@ -27,6 +27,7 @@ public class StudentMenu {
 			System.out.println("4. 학생정보삭제");
 			System.out.println("5. 프로그램종료");
 			int select = sc.nextInt();
+			Student student = null;
 			
 			switch (select){
 			case 1:
@@ -36,10 +37,12 @@ public class StudentMenu {
 				sv.view(students);
 				break;
 			case 3:
-				Student student = ss.studentSearch(students);
+				student = ss.studentSearch(students);
 				sv.view(student);
 				break;
 			case 4:
+				student = ss.studentSearch(students);
+				ss.studentDelete(students, student);
 				break;
 			default:
 				check= !check;
