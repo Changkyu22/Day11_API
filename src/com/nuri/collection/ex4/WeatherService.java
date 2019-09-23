@@ -56,11 +56,15 @@ public class WeatherService {
 		return weather;
 	}
 	
-	
+		// 도시명 입력바아서 해당 정보(weather)를 삭제
+		// 삭제되었으면 "삭제성공", 안되면  "삭제실패".
 	public void deleteWeather(HashMap<String, Weather> map) {
-		System.out.println("도시명을 입력하세요.");
-		String city = sc.next();
-		
+		map.remove(map);
+		System.out.println("삭제할 도시명을 입력하세요.");
+		String city = sc.next();	
+		boolean check = false;
+		check = true;
+		return check;
 	}
 
 	// 매서드 명 addWeather
