@@ -10,11 +10,11 @@ public class RandomTest2 {
 		// 로또번호 입력
 		// 1~45
 
-		Random random = new Random();
 		ArrayList<Integer> ar = new ArrayList<Integer>();
+		Random random = new Random();
 
-		for(int i=0; i<6; i++) {
-			int num = random.nextInt(45)+1;
+		for(int i=0; i<10; i++) {
+			int num = random.nextInt(11)+1;
 			ar.add(num);
 
 			for(int j=0; j<i; j++) {
